@@ -8,7 +8,6 @@
 <meta name="description" content="ROYAL MOTORS - Brand new cars, quality used cars and car import services in Tanzania.">
 <title>ROYAL MOTORS | Drive Your Dream</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-
 <style>
 :root{--gold:#c9a45c;--gold2:#e6cc91;--ink:#11110f;--muted:#77756f;--cream:#f7f5f0}
 *{box-sizing:border-box}
@@ -16,9 +15,7 @@ html{scroll-behavior:smooth;width:100%;overflow-x:hidden}
 body{margin:0;width:100%;max-width:100%;overflow-x:hidden;font-family:'DM Sans',sans-serif;color:var(--ink);background:#fff}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
-
 .topbar{background:#0d0d0c;color:#d9d5ca;padding:9px 6%;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-
 header{background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid #eee}
 .nav{max-width:1180px;width:100%;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:15px}
 .brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
@@ -28,7 +25,6 @@ header{background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid 
 nav{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;font-size:12px;font-weight:700}
 nav a:hover{color:#a47b36}
 .nav-cta,.btn{background:var(--gold);color:#15130e;padding:12px 16px;border-radius:3px;font-weight:700;font-size:12px;display:inline-block;text-align:center}
-
 .hero{background:linear-gradient(90deg,rgba(9,9,8,.88),rgba(9,9,8,.42)),url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85') center/cover;min-height:570px;display:flex;align-items:center;color:#fff}
 .hero-inner{max-width:1180px;margin:auto;padding:75px 22px;width:100%}
 .eyebrow{color:var(--gold2);letter-spacing:2px;font-size:11px;font-weight:700;line-height:1.8}
@@ -37,20 +33,17 @@ nav a:hover{color:#a47b36}
 .hero p{color:#e0ddd6;max-width:550px;line-height:1.8;font-size:15px}
 .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
 .btn-outline{border:1px solid #d5c39d;color:#fff;padding:12px 19px;border-radius:3px;font-size:12px;font-weight:700;text-align:center}
-
 .trust{background:#111;color:#fff;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:22px 5%;gap:15px}
 .trust div{text-align:center;border-right:1px solid #39352d;padding:5px}
 .trust div:last-child{border:0}
 .trust b{color:var(--gold2);font:700 22px 'Playfair Display',serif;display:block}
 .trust span{font-size:11px;color:#c8c4ba;letter-spacing:.5px;line-height:1.6}
-
 section{padding:75px 22px}
 .wrap{max-width:1136px;width:100%;margin:auto;min-width:0}
 .section-head{text-align:center;margin-bottom:38px}
 .section-head .eyebrow{color:#a47b36}
 .section-head h2{font:700 clamp(28px,4vw,43px) 'Playfair Display',serif;margin:10px 0}
 .section-head p{color:var(--muted);font-size:14px;line-height:1.8;max-width:650px;margin:auto}
-
 .category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 .category{position:relative;min-height:300px;overflow:hidden;background:#222;color:#fff}
 .category img{width:100%;height:300px;object-fit:cover;transition:transform .5s}
@@ -59,13 +52,12 @@ section{padding:75px 22px}
 .category-copy{position:absolute;z-index:1;bottom:25px;left:25px;right:15px}
 .category-copy small{color:var(--gold2);letter-spacing:2px;font-size:10px}
 .category-copy h3{font:700 25px 'Playfair Display',serif;margin:8px 0}
-
 .cars{background:var(--cream)}
 .filter-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 28px}
 .filter{border:1px solid #d8d2c6;background:transparent;padding:10px 18px;font:600 12px 'DM Sans';cursor:pointer}
 .filter.active,.filter:hover{background:#171613;color:#fff;border-color:#171613}
 .car-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.car-card{background:#fff;border:1px solid #eee;box-shadow:0 8px 25px rgba(0,0,0,.04);min-width:0;overflow:hidden}
+.car-card{background:#fff;border:1px solid #eee;box-shadow:0 8px 25px rgba(0,0,0,.04);min-width:0;overflow:hidden;cursor:pointer}
 .car-card img{width:100%;height:205px;object-fit:cover}
 .car-info{padding:18px;min-width:0}
 .tag{font-size:10px;color:#987333;letter-spacing:1px;font-weight:700}
@@ -73,8 +65,8 @@ section{padding:75px 22px}
 .car-info p{font-size:12px;color:var(--muted);margin:0 0 15px}
 .car-bottom{border-top:1px solid #eee;padding-top:14px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .price{font-weight:700;font-size:13px}
-.mini-btn{font-size:11px;font-weight:700;color:#9a7434;overflow-wrap:anywhere}
-
+.mini-btn{font-size:11px;font-weight:700;color:#9a7434}
+.details-hint{font-size:11px;color:#9a7434;font-weight:700;margin-top:12px}
 .order{background:#151513;color:#fff}
 .order-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .order h2{font:700 clamp(30px,4vw,47px) 'Playfair Display',serif;margin:12px 0}
@@ -83,20 +75,31 @@ section{padding:75px 22px}
 .order-list div{display:flex;gap:12px;align-items:flex-start;color:#eee;font-size:13px;line-height:1.7}
 .check{color:var(--gold2);font-size:19px;flex-shrink:0}
 .order-photo{width:100%;height:390px;object-fit:cover;border:1px solid #6f5b36}
-
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .about-grid img{width:100%;height:350px;object-fit:cover}
 .about h2{font:700 clamp(28px,4vw,39px) 'Playfair Display',serif;margin:12px 0}
 .about p{color:var(--muted);font-size:14px;line-height:1.9}
-
 footer{background:#0d0d0c;color:#eee;padding:45px 22px 20px}
 .footer-grid{max-width:1136px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
 .footer-grid p,.footer-grid a{font-size:12px;color:#aaa;line-height:2}
 .footer-grid h4{color:var(--gold2);letter-spacing:1px;font-size:12px}
 .copyright{max-width:1136px;margin:30px auto 0;border-top:1px solid #302d27;padding-top:17px;color:#817d73;font-size:11px}
-
 .wa-float{position:fixed;right:14px;bottom:14px;z-index:30;background:#1eaa62;color:#fff;padding:13px 16px;border-radius:40px;font-size:12px;font-weight:700;box-shadow:0 8px 25px #0003}
-
+.car-modal{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.86);padding:18px;overflow-y:auto;align-items:center;justify-content:center}
+.car-modal.show{display:flex}
+.modal-content{background:#fff;width:100%;max-width:760px;margin:auto;position:relative;padding:22px;border-radius:5px}
+.modal-close{position:absolute;right:12px;top:12px;z-index:2;background:#171613;color:#fff;border:0;padding:9px 13px;font-size:18px;cursor:pointer}
+.modal-photo{width:100%;height:330px;object-fit:cover;margin:25px 0 15px;background:#eee}
+.modal-thumbs{display:flex;gap:9px;overflow-x:auto;margin:10px 0 18px}
+.modal-thumbs img{width:85px;height:62px;object-fit:cover;cursor:pointer;border:2px solid transparent;flex-shrink:0}
+.modal-thumbs img.active{border-color:var(--gold)}
+.modal-content h2{font:700 29px 'Playfair Display',serif;margin:10px 0}
+.modal-content>p{font-size:13px;color:var(--muted);line-height:1.7}
+.detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:20px 0}
+.detail-item{background:var(--cream);padding:13px;font-size:12px;overflow-wrap:anywhere}
+.detail-item b{display:block;color:#987333;margin-bottom:6px}
+.modal-note{font-size:11px!important;color:#777}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
 @media(max-width:850px){
 .nav{flex-wrap:wrap;justify-content:center}
 .nav .brand{width:100%;justify-content:center}
@@ -108,7 +111,6 @@ nav a{font-size:11px;padding:8px;background:#f7f5f0;border-radius:3px;text-align
 .footer-grid{grid-template-columns:1fr 1fr}
 .footer-grid>div:first-child{grid-column:1/-1}
 }
-
 @media(max-width:520px){
 .topbar{justify-content:center;text-align:center;font-size:10px;padding:9px 12px}
 .nav{padding:12px 10px}
@@ -141,6 +143,11 @@ section{padding:52px 15px}
 .footer-grid{grid-template-columns:minmax(0,1fr)}
 .footer-grid>div:first-child{grid-column:auto}
 .wa-float{right:10px;bottom:10px;padding:11px 14px;font-size:11px}
+.modal-content{padding:14px}
+.modal-photo{height:220px}
+.modal-content h2{font-size:24px}
+.detail-grid{gap:7px}
+.detail-item{padding:10px;font-size:11px}
 }
 </style>
 </head>
@@ -157,52 +164,51 @@ section{padding:52px 15px}
 <span class="crest">♛</span>
 <span><strong>ROYAL MOTORS</strong><small>DRIVE YOUR DREAM</small></span>
 </a>
-<nav aria-label="Main navigation">
-<a href="#home">Home / Nyumbani</a>
-<a href="#magari">Cars / Magari</a>
-<a href="#magari">Brand New / Mapya</a>
-<a href="#magari">Used Cars / Used</a>
-<a href="#agiza">Order / Agiza</a>
-<a href="#kuhusu">About / Kuhusu</a>
-<a class="nav-cta" href="https://wa.me/255622865262">Contact / Wasiliana</a>
+<nav>
+<a href="#home">HOME</a>
+<a href="#magari">OUR CARS</a>
+<a href="#agiza">ORDER A CAR</a>
+<a href="#kuhusu">ABOUT US</a>
+<a href="#mawasiliano">CONTACT</a>
 </nav>
+<a class="nav-cta" href="https://wa.me/255622865262">CONTACT US</a>
 </div>
 </header>
 
 <main>
 <section class="hero" id="home">
 <div class="hero-inner">
-<div class="eyebrow">WELCOME TO ROYAL MOTORS / KARIBU ROYAL MOTORS</div>
-<h1>YOUR DREAM CAR.<br><span>EXCEPTIONAL SERVICE.</span></h1>
-<p>We help you find the car you love. Explore brand new cars, quality used cars, or let us source a car to match your needs. / Tunakusaidia kupata gari unalolitamani.</p>
+<div class="eyebrow">WELCOME TO ROYAL MOTORS · TANZANIA</div>
+<h1>DRIVE YOUR <span>DREAM.</span><br>WE FIND YOUR CAR.</h1>
+<p>Discover premium brand new and quality used cars. We help you find the right vehicle for your lifestyle and budget.</p>
 <div class="hero-actions">
-<a class="btn" href="#magari">Explore Cars / Angalia Magari</a>
-<a class="btn-outline" href="#agiza">Order Your Car / Agiza Gari</a>
+<a class="btn" href="#magari">EXPLORE OUR CARS</a>
+<a class="btn-outline" href="https://wa.me/255622865262">CHAT WITH US ON WHATSAPP</a>
 </div>
 </div>
 </section>
 
 <div class="trust">
-<div><b>BRAND NEW</b><span>BRAND NEW CARS / MAGARI MAPYA</span></div>
-<div><b>QUALITY USED</b><span>QUALITY USED CARS / MAGARI YALIYOTUMIKA</span></div>
-<div><b>YOUR CHOICE</b><span>CAR SOURCING / TUNAKUAGIZIA GARI</span></div>
+<div><b>QUALITY</b><span>Carefully selected vehicles</span></div>
+<div><b>TRUST</b><span>Customer-focused service</span></div>
+<div><b>SUPPORT</b><span>We help you find your car</span></div>
 </div>
 
-<section>
+<section id="aina">
 <div class="wrap">
 <div class="section-head">
-<div class="eyebrow">OUR SERVICES / HUDUMA ZETU</div>
-<h2>Your Car, Your Choice / Gari Lako, Chaguo Lako</h2>
-<p>Discover our car services, designed to make your buying experience simple and convenient. / Huduma zetu zimeandaliwa kukurahisishia ununuzi wa gari.</p>
+<div class="eyebrow">EXPLORE OUR COLLECTION</div>
+<h2>Find Your Perfect Car</h2>
+<p>Choose from brand new vehicles and quality used cars.</p>
 </div>
 <div class="category-grid">
 <a class="category" href="#magari">
-<img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?auto=format&fit=crop&w=1000&q=80" alt="Brand new car">
-<div class="category-copy"><small>ZERO MILEAGE OPTIONS</small><h3>Brand New Cars / Magari Mapya</h3></div>
+<img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80" alt="New cars">
+<div class="category-copy"><small>FRESH FROM THE MARKET</small><h3>Brand New Cars</h3></div>
 </a>
 <a class="category" href="#magari">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80" alt="Used car">
-<div class="category-copy"><small>QUALITY PRE-OWNED</small><h3>Used Cars / Magari Yaliyotumika</h3></div>
+<img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80" alt="Used cars">
+<div class="category-copy"><small>QUALITY SELECTED</small><h3>Quality Used Cars</h3></div>
 </a>
 </div>
 </div>
@@ -211,10 +217,11 @@ section{padding:52px 15px}
 <section class="cars" id="magari">
 <div class="wrap">
 <div class="section-head">
-<div class="eyebrow">CAR GALLERY / MAGARI YETU</div>
-<h2>Featured Cars / Magari Yanayokuvutia</h2>
-<p>These are sample images for display. Contact us to confirm available vehicles, prices and details. / Hizi ni picha za mfano; wasiliana nasi kuthibitisha magari yaliyopo na bei.</p>
+<div class="eyebrow">OUR VEHICLES / MAGARI YETU</div>
+<h2>Explore Our Cars</h2>
+<p>Tap any vehicle to view mileage, year, engine, fuel, price and other details. / Bonyeza gari kuona kilomita na maelezo mengine.</p>
 </div>
+
 <div class="filter-row">
 <button class="filter active" data-filter="all">All Cars / Yote</button>
 <button class="filter" data-filter="new">Brand New / Mapya</button>
@@ -222,44 +229,40 @@ section{padding:52px 15px}
 </div>
 
 <div class="car-grid">
-<article class="car-card" data-type="new">
+
+<article class="car-card" data-type="new" data-name="Luxury SUV" data-make="To be confirmed" data-model="Luxury SUV" data-year="To be confirmed" data-mileage="To be confirmed" data-engine="To be confirmed" data-fuel="To be confirmed" data-transmission="To be confirmed" data-colour="To be confirmed" data-condition="Brand New / Gari Jipya" data-price="Ask for Price / Ulizia Bei" data-description="Premium SUV sample listing. Contact ROYAL MOTORS to confirm the exact make, model and specifications.">
 <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80" alt="Luxury SUV">
 <div class="car-info">
 <span class="tag">BRAND NEW · SAMPLE / MFANO</span>
 <h3>Luxury SUV</h3>
 <p>Modern Design / Muonekano wa kisasa · SUV</p>
-<div class="car-bottom">
-<span class="price">Ask for Price / Ulizia Bei</span>
-<a class="mini-btn" href="https://wa.me/255622865262?text=Hello%20ROYAL%20MOTORS%2C%20I%20want%20details%20about%20Luxury%20SUV.">Enquire / Uliza WhatsApp ↗</a>
-</div>
+<div class="car-bottom"><span class="price">Ask for Price / Ulizia Bei</span><span class="mini-btn">View Details ↗</span></div>
+<div class="details-hint">Tap photo or card for full details / Bonyeza kuona maelezo</div>
 </div>
 </article>
 
-<article class="car-card" data-type="used">
+<article class="car-card" data-type="used" data-name="Premium Sedan" data-make="To be confirmed" data-model="Premium Sedan" data-year="To be confirmed" data-mileage="To be confirmed" data-engine="To be confirmed" data-fuel="To be confirmed" data-transmission="To be confirmed" data-colour="To be confirmed" data-condition="Used / Limetumika" data-price="Ask for Price / Ulizia Bei" data-description="Quality used sedan sample listing. Contact ROYAL MOTORS to confirm the exact make, model and specifications.">
 <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80" alt="Premium Sedan">
 <div class="car-info">
 <span class="tag">QUALITY USED · SAMPLE / MFANO</span>
 <h3>Premium Sedan</h3>
 <p>Luxury Design / Muonekano wa kifahari · Sedan</p>
-<div class="car-bottom">
-<span class="price">Ask for Price / Ulizia Bei</span>
-<a class="mini-btn" href="https://wa.me/255622865262?text=Hello%20ROYAL%20MOTORS%2C%20I%20want%20details%20about%20Premium%20Sedan.">Enquire / Uliza WhatsApp ↗</a>
-</div>
+<div class="car-bottom"><span class="price">Ask for Price / Ulizia Bei</span><span class="mini-btn">View Details ↗</span></div>
+<div class="details-hint">Tap photo or card for full details / Bonyeza kuona maelezo</div>
 </div>
 </article>
 
-<article class="car-card" data-type="new">
+<article class="car-card" data-type="new" data-name="Luxury Coupe" data-make="To be confirmed" data-model="Luxury Coupe" data-year="To be confirmed" data-mileage="To be confirmed" data-engine="To be confirmed" data-fuel="To be confirmed" data-transmission="To be confirmed" data-colour="To be confirmed" data-condition="Brand New / Gari Jipya" data-price="Ask for Price / Ulizia Bei" data-description="Luxury coupe sample listing. Contact ROYAL MOTORS to confirm the exact make, model and specifications.">
 <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=900&q=80" alt="Luxury Coupe">
 <div class="car-info">
 <span class="tag">BRAND NEW · SAMPLE / MFANO</span>
 <h3>Luxury Coupe</h3>
 <p>Unique Design / Muonekano wa kipekee · Coupe</p>
-<div class="car-bottom">
-<span class="price">Ask for Price / Ulizia Bei</span>
-<a class="mini-btn" href="https://wa.me/255622865262?text=Hello%20ROYAL%20MOTORS%2C%20I%20want%20details%20about%20Luxury%20Coupe.">Enquire / Uliza WhatsApp ↗</a>
-</div>
+<div class="car-bottom"><span class="price">Ask for Price / Ulizia Bei</span><span class="mini-btn">View Details ↗</span></div>
+<div class="details-hint">Tap photo or card for full details / Bonyeza kuona maelezo</div>
 </div>
 </article>
+
 </div>
 </div>
 </section>
@@ -295,15 +298,22 @@ section{padding:52px 15px}
 </section>
 </main>
 
-<footer>
+<footer id="mawasiliano">
 <div class="footer-grid">
 <div>
-<a class="brand" href="#home"><span class="crest">♛</span><span><strong style="color:#fff">ROYAL MOTORS</strong><small>DRIVE YOUR DREAM</small></span></a>
+<a class="brand" href="#home">
+<span class="crest">♛</span>
+<span><strong style="color:#fff">ROYAL MOTORS</strong><small>DRIVE YOUR DREAM</small></span>
+</a>
 <p>Drive Your Dream, We Find Your Car.<br>Brand new cars, used cars and car sourcing / Magari mapya, used na huduma ya kukuagizia gari.</p>
 </div>
 <div>
 <h4>SERVICES / HUDUMA</h4>
-<p><a href="#magari">Brand New Cars / Magari Mapya</a><br><a href="#magari">Used Cars / Magari Used</a><br><a href="#agiza">Order a Car / Agiza Gari</a></p>
+<p>
+<a href="#magari">Brand New Cars / Magari Mapya</a><br>
+<a href="#magari">Used Cars / Magari Used</a><br>
+<a href="#agiza">Order a Car / Agiza Gari</a>
+</p>
 </div>
 <div>
 <h4>Contact Us / Wasiliana Nasi</h4>
@@ -316,16 +326,128 @@ section{padding:52px 15px}
 
 <a class="wa-float" href="https://wa.me/255622865262?text=Hello%20ROYAL%20MOTORS">☏ WHATSAPP</a>
 
+<div class="car-modal" id="carModal" role="dialog" aria-modal="true" aria-label="Car details">
+<div class="modal-content">
+<button class="modal-close" id="closeModal" aria-label="Close">✕</button>
+<img id="modalPhoto" class="modal-photo" src="" alt="Selected car">
+<div class="modal-thumbs" id="modalThumbs"></div>
+<span class="tag" id="modalType"></span>
+<h2 id="modalName"></h2>
+<p id="modalDescription"></p>
+
+<div class="detail-grid">
+<div class="detail-item"><b>Make / Kampuni</b><span id="dMake"></span></div>
+<div class="detail-item"><b>Model / Aina</b><span id="dModel"></span></div>
+<div class="detail-item"><b>Year / Mwaka</b><span id="dYear"></span></div>
+<div class="detail-item"><b>Mileage / Kilomita</b><span id="dMileage"></span></div>
+<div class="detail-item"><b>Engine / Injini</b><span id="dEngine"></span></div>
+<div class="detail-item"><b>Fuel / Mafuta</b><span id="dFuel"></span></div>
+<div class="detail-item"><b>Transmission / Gear</b><span id="dTransmission"></span></div>
+<div class="detail-item"><b>Colour / Rangi</b><span id="dColour"></span></div>
+<div class="detail-item"><b>Condition / Hali</b><span id="dCondition"></span></div>
+<div class="detail-item"><b>Price / Bei</b><span id="dPrice"></span></div>
+</div>
+
+<p class="modal-note">Sample listing: details, mileage, photos and price must be updated with verified vehicle information before advertising. / Taarifa hizi ni za mfano; weka taarifa halisi za gari kabla ya kulitangaza.</p>
+<div class="modal-actions">
+<a id="modalWhatsApp" class="btn" href="#" target="_blank" rel="noopener">Enquire on WhatsApp / Uliza WhatsApp</a>
+</div>
+</div>
+</div>
+
 <script>
 const filters=document.querySelectorAll('.filter');
 const cards=document.querySelectorAll('.car-card');
+
 filters.forEach(btn=>btn.addEventListener('click',()=>{
-filters.forEach(b=>b.classList.remove('active'));
-btn.classList.add('active');
-cards.forEach(card=>{
-card.style.display=btn.dataset.filter==='all'||card.dataset.type===btn.dataset.filter?'':'none';
-});
+ filters.forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active');
+ cards.forEach(card=>{
+  card.style.display=btn.dataset.filter==='all'||card.dataset.type===btn.dataset.filter?'':'none';
+ });
 }));
+
+const modal=document.getElementById('carModal');
+const modalPhoto=document.getElementById('modalPhoto');
+const thumbs=document.getElementById('modalThumbs');
+
+function openCarDetails(card){
+ const name=card.dataset.name;
+ const images=Array.from(card.querySelectorAll('img')).map(img=>img.src);
+
+ modalPhoto.src=images[0];
+ thumbs.innerHTML='';
+
+ images.forEach((src,index)=>{
+  const thumb=document.createElement('img');
+  thumb.src=src;
+  thumb.alt=name+' photo '+(index+1);
+  if(index===0)thumb.classList.add('active');
+
+  thumb.addEventListener('click',()=>{
+   modalPhoto.src=src;
+   thumbs.querySelectorAll('img').forEach(item=>item.classList.remove('active'));
+   thumb.classList.add('active');
+  });
+
+  thumbs.appendChild(thumb);
+ });
+
+ document.getElementById('modalName').textContent=name;
+ document.getElementById('modalType').textContent=card.dataset.type==='new'?'BRAND NEW / GARI JIPYA':'QUALITY USED / GARI LILILOTUMIKA';
+ document.getElementById('modalDescription').textContent=card.dataset.description;
+
+ const fields={
+  dMake:'make',
+  dModel:'model',
+  dYear:'year',
+  dMileage:'mileage',
+  dEngine:'engine',
+  dFuel:'fuel',
+  dTransmission:'transmission',
+  dColour:'colour',
+  dCondition:'condition',
+  dPrice:'price'
+ };
+
+ Object.entries(fields).forEach(([id,key])=>{
+  document.getElementById(id).textContent=card.dataset[key]||'Contact us / Wasiliana nasi';
+ });
+
+ const msg=encodeURIComponent('Hello ROYAL MOTORS, please send me full details, actual photos and price for '+name+'.');
+ document.getElementById('modalWhatsApp').href='https://wa.me/255622865262?text='+msg;
+
+ modal.classList.add('show');
+ document.body.style.overflow='hidden';
+}
+
+cards.forEach(card=>{
+ card.addEventListener('click',event=>{
+  if(event.target.closest('a,button'))return;
+  openCarDetails(card);
+ });
+
+ const hint=card.querySelector('.mini-btn');
+ if(hint){
+  hint.style.cursor='pointer';
+  hint.addEventListener('click',()=>openCarDetails(card));
+ }
+});
+
+function closeCarDetails(){
+ modal.classList.remove('show');
+ document.body.style.overflow='';
+}
+
+document.getElementById('closeModal').addEventListener('click',closeCarDetails);
+
+modal.addEventListener('click',event=>{
+ if(event.target===modal)closeCarDetails();
+});
+
+document.addEventListener('keydown',event=>{
+ if(event.key==='Escape'&&modal.classList.contains('show'))closeCarDetails();
+});
 </script>
 </body>
 </html>
