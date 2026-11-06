@@ -246,44 +246,7 @@ section{padding:52px 15px}
 <button class="filter" data-filter="used">Used Cars / Used</button>
 </div>
 
-<div class="car-grid">
-
-<article class="car-card" data-type="new" data-name="Luxury SUV" data-make="To be confirmed" data-model="Luxury SUV" data-year="To be confirmed" data-mileage="To be confirmed" data-engine="To be confirmed" data-fuel="To be confirmed" data-transmission="To be confirmed" data-colour="To be confirmed" data-condition="Brand New / Gari Jipya" data-price="Ask for Price / Ulizia Bei" data-description="Premium SUV sample listing. Contact ROYAL MOTORS to confirm the exact make, model and specifications.">
-<img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80" alt="Luxury SUV">
-<div class="car-info">
-<span class="tag">BRAND NEW · SAMPLE / MFANO</span>
-<h3>Luxury SUV</h3>
-<p>Modern Design / Muonekano wa kisasa · SUV</p>
-<div class="car-bottom"><span class="price">Ask for Price / Ulizia Bei</span><span class="mini-btn">View Details ↗</span></div>
-<div class="details-hint">Tap photo or card for full details / Bonyeza kuona maelezo</div>
-</div>
-</article>
-
-<article class="car-card" data-type="used" data-name="Premium Sedan" data-make="To be confirmed" data-model="Premium Sedan" data-year="To be confirmed" data-mileage="To be confirmed" data-engine="To be confirmed" data-fuel="To be confirmed" data-transmission="To be confirmed" data-colour="To be confirmed" data-condition="Used / Limetumika" data-price="Ask for Price / Ulizia Bei" data-description="Quality used sedan sample listing. Contact ROYAL MOTORS to confirm the exact make, model and specifications.">
-<img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80" alt="Premium Sedan">
-<div class="car-info">
-<span class="tag">QUALITY USED · SAMPLE / MFANO</span>
-<h3>Premium Sedan</h3>
-<p>Luxury Design / Muonekano wa kifahari · Sedan</p>
-<div class="car-bottom"><span class="price">Ask for Price / Ulizia Bei</span><span class="mini-btn">View Details ↗</span></div>
-<div class="details-hint">Tap photo or card for full details / Bonyeza kuona maelezo</div>
-</div>
-</article>
-
-<article class="car-card" data-type="new" data-name="Luxury Coupe" data-make="To be confirmed" data-model="Luxury Coupe" data-year="To be confirmed" data-mileage="To be confirmed" data-engine="To be confirmed" data-fuel="To be confirmed" data-transmission="To be confirmed" data-colour="To be confirmed" data-condition="Brand New / Gari Jipya" data-price="Ask for Price / Ulizia Bei" data-description="Luxury coupe sample listing. Contact ROYAL MOTORS to confirm the exact make, model and specifications.">
-<img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=900&q=80" alt="Luxury Coupe">
-<div class="car-info">
-<span class="tag">BRAND NEW · SAMPLE / MFANO</span>
-<h3>Luxury Coupe</h3>
-<p>Unique Design / Muonekano wa kipekee · Coupe</p>
-<div class="car-bottom"><span class="price">Ask for Price / Ulizia Bei</span><span class="mini-btn">View Details ↗</span></div>
-<div class="details-hint">Tap photo or card for full details / Bonyeza kuona maelezo</div>
-</div>
-</article>
-
-</div>
-</div>
-</section>
+<div id="carsStatus" role="status" aria-live="polite" style="text-align:center;padding:22px;color:#777">Loading available cars… / Tunapakia magari</div><div class="car-grid" id="carGrid"></div></div></section>
 
 <section class="order" id="agiza">
 <div class="wrap order-grid">
@@ -373,99 +336,21 @@ section{padding:52px 15px}
 </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const filters=document.querySelectorAll('.filter');
-const cards=document.querySelectorAll('.car-card');
-
-filters.forEach(btn=>btn.addEventListener('click',()=>{
- filters.forEach(b=>b.classList.remove('active'));
- btn.classList.add('active');
- cards.forEach(card=>{
-  card.style.display=btn.dataset.filter==='all'||card.dataset.type===btn.dataset.filter?'':'none';
- });
-}));
-
-const modal=document.getElementById('carModal');
-const modalPhoto=document.getElementById('modalPhoto');
-const thumbs=document.getElementById('modalThumbs');
-
-function openCarDetails(card){
- const name=card.dataset.name;
- const images=Array.from(card.querySelectorAll('img')).map(img=>img.src);
-
- modalPhoto.src=images[0];
- thumbs.innerHTML='';
-
- images.forEach((src,index)=>{
-  const thumb=document.createElement('img');
-  thumb.src=src;
-  thumb.alt=name+' photo '+(index+1);
-  if(index===0)thumb.classList.add('active');
-
-  thumb.addEventListener('click',()=>{
-   modalPhoto.src=src;
-   thumbs.querySelectorAll('img').forEach(item=>item.classList.remove('active'));
-   thumb.classList.add('active');
-  });
-
-  thumbs.appendChild(thumb);
- });
-
- document.getElementById('modalName').textContent=name;
- document.getElementById('modalType').textContent=card.dataset.type==='new'?'BRAND NEW / GARI JIPYA':'QUALITY USED / GARI LILILOTUMIKA';
- document.getElementById('modalDescription').textContent=card.dataset.description;
-
- const fields={
-  dMake:'make',
-  dModel:'model',
-  dYear:'year',
-  dMileage:'mileage',
-  dEngine:'engine',
-  dFuel:'fuel',
-  dTransmission:'transmission',
-  dColour:'colour',
-  dCondition:'condition',
-  dPrice:'price'
- };
-
- Object.entries(fields).forEach(([id,key])=>{
-  document.getElementById(id).textContent=card.dataset[key]||'Contact us / Wasiliana nasi';
- });
-
- const msg=encodeURIComponent('Hello ROYAL MOTORS, please send me full details, actual photos and price for '+name+'.');
- document.getElementById('modalWhatsApp').href='https://wa.me/255622865262?text='+msg;
-
- modal.classList.add('show');
- document.body.style.overflow='hidden';
-}
-
-cards.forEach(card=>{
- card.addEventListener('click',event=>{
-  if(event.target.closest('a,button'))return;
-  openCarDetails(card);
- });
-
- const hint=card.querySelector('.mini-btn');
- if(hint){
-  hint.style.cursor='pointer';
-  hint.addEventListener('click',()=>openCarDetails(card));
- }
-});
-
-function closeCarDetails(){
- modal.classList.remove('show');
- document.body.style.overflow='';
-}
-
-document.getElementById('closeModal').addEventListener('click',closeCarDetails);
-
-modal.addEventListener('click',event=>{
- if(event.target===modal)closeCarDetails();
-});
-
-document.addEventListener('keydown',event=>{
- if(event.key==='Escape'&&modal.classList.contains('show'))closeCarDetails();
-});
-</script>
+const SUPABASE_URL="https://mlzedoeetcwevbtnhrnp.supabase.co";
+const SUPABASE_ANON_KEY="PASTE_YOUR_PUBLIC_ANON_OR_PUBLISHABLE_KEY_HERE";
+const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+const filters=document.querySelectorAll('.filter'),carGrid=document.getElementById('carGrid'),carsStatus=document.getElementById('carsStatus');let vehicles=[];
+function money(v){return v==null||v===''?'Price on request / Ulizia bei':'TZS '+Number(v).toLocaleString('en-TZ')}
+function mileage(v){return v==null?'Not specified':Number(v).toLocaleString()+' km'}
+function esc(v){return String(v??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]))}
+function typeOfCar(c){return Number(c.mileage||0)===0?'new':'used'}
+function renderCars(){carGrid.innerHTML='';let f=document.querySelector('.filter.active')?.dataset.filter||'all',shown=vehicles.filter(c=>f==='all'||typeOfCar(c)===f);if(!shown.length){carsStatus.textContent='No available cars found. / Hakuna magari yaliyopo kwa sasa.';carsStatus.style.display='';return}carsStatus.style.display='none';shown.forEach(c=>{let t=typeOfCar(c),n=[c.make,c.model].filter(Boolean).join(' ')||'Vehicle',p=c.image_url||'',card=document.createElement('article');card.className='car-card';Object.assign(card.dataset,{type:t,name:n,make:c.make||'',model:c.model||'',year:c.year??'',mileage:c.mileage??'',fuel:c.fuel_type||'',transmission:c.transmission||'',condition:c.status||'',price:money(c.price),description:c.description||'',image:p});card.innerHTML='<img src="'+esc(p)+'" alt="'+esc(n)+'" loading="lazy"><div class="car-info"><span class="tag">'+esc(String(c.status||'AVAILABLE').toUpperCase())+'</span><h3>'+esc(n)+'</h3><p>'+esc(c.year??'Year not specified')+' · '+esc(mileage(c.mileage))+' · '+esc(c.transmission||'')+'</p><div class="car-bottom"><span class="price">'+esc(money(c.price))+'</span><span class="mini-btn">View Details ↗</span></div><div class="details-hint">Tap photo or card for full details / Bonyeza kuona maelezo</div></div>';carGrid.appendChild(card);card.addEventListener('click',e=>{if(!e.target.closest('a,button'))openCarDetails(card)});card.querySelector('.mini-btn').addEventListener('click',()=>openCarDetails(card))})}
+filters.forEach(b=>b.addEventListener('click',()=>{filters.forEach(x=>x.classList.remove('active'));b.classList.add('active');renderCars()}));
+const modal=document.getElementById('carModal'),modalPhoto=document.getElementById('modalPhoto'),thumbs=document.getElementById('modalThumbs');
+function openCarDetails(card){let n=card.dataset.name,p=card.dataset.image||'';modalPhoto.src=p;thumbs.innerHTML='';if(p){let im=document.createElement('img');im.src=p;im.alt=n+' photo';im.className='active';thumbs.appendChild(im)}document.getElementById('modalName').textContent=n;document.getElementById('modalType').textContent=card.dataset.type==='new'?'BRAND NEW / GARI JIPYA':'QUALITY USED / GARI LILILOTUMIKA';document.getElementById('modalDescription').textContent=card.dataset.description||'';let fields={dMake:'make',dModel:'model',dYear:'year',dMileage:'mileage',dFuel:'fuel',dTransmission:'transmission',dCondition:'condition',dPrice:'price'};Object.entries(fields).forEach(([id,k])=>document.getElementById(id).textContent=k==='mileage'?mileage(card.dataset[k]):card.dataset[k]||'Not specified');document.getElementById('dEngine').textContent='Not in cars table';document.getElementById('dColour').textContent='Not in cars table';document.querySelector('.modal-note').style.display='none';document.getElementById('modalWhatsApp').href='https://wa.me/255622865262?text='+encodeURIComponent('Hello ROYAL MOTORS, please send details and price for '+n+'.');modal.classList.add('show');document.body.style.overflow='hidden'}
+function closeCarDetails(){modal.classList.remove('show');document.body.style.overflow=''}document.getElementById('closeModal').addEventListener('click',closeCarDetails);modal.addEventListener('click',e=>{if(e.target===modal)closeCarDetails()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('show'))closeCarDetails()});
+async function loadVehicles(){if(SUPABASE_ANON_KEY.includes('PASTE_YOUR')){carsStatus.textContent='Setup required: add the Supabase public anon/publishable key in index.html.';return}carsStatus.textContent='Loading available cars…';try{let {data,error}=await supabaseClient.from('cars').select('id,make,model,year,price,mileage,transmission,fuel_type,description,image_url,status,created_at').eq('status','available').order('created_at',{ascending:false});if(error)throw error;vehicles=data||[];if(!vehicles.length){carsStatus.textContent='No available cars. Verify status values and public SELECT/RLS policy.';return}renderCars()}catch(e){console.error('Supabase cars error:',e);carsStatus.textContent='Cars could not load. Check public SELECT/RLS, key and project settings.'}}loadVehicles();</script>
 </body>
 </html>
