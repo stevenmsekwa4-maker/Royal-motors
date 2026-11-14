@@ -43,7 +43,7 @@ main{max-width:1180px;margin:0 auto;padding:38px 24px 28px}.eyebrow{color:#9a783
 <main id="dashboardView">
  <section id="carsPage">
   <div class="eyebrow">INVENTORY</div><h1 class="heading">Cars</h1>
-  <p class="intro">Add, edit and price your vehicles. View car photos and choose what goes live.</p>
+  <p class="intro">Add new vehicles and upload photos to the Royal Motors inventory.</p>
   <button id="newCarBtn" class="gold-btn">＋ &nbsp; Add a car</button>
   <div id="appMsg" class="notice hidden" role="status"></div>
   <div class="controls"><input id="searchBox" class="control" type="search" placeholder="⌕  Search make, model..."><select id="conditionFilter" class="control"><option value="all">All conditions</option><option value="new">Brand New</option><option value="used">Used</option></select></div>
@@ -70,7 +70,7 @@ main{max-width:1180px;margin:0 auto;padding:38px 24px 28px}.eyebrow{color:#9a783
  <button class="navitem" data-page="customers"><span class="ico">♧</span>Customers</button>
 </nav>
 <div id="editorBackdrop" class="modal-backdrop">
- <div class="modal"><div class="modal-head"><div><h2 id="editorTitle">Add a car</h2><p style="margin:7px 0 0;color:#777b84;font-size:14px">New listing for your showroom</p></div><button type="button" class="close" id="closeEditor">×</button></div>
+ <div class="modal"><div class="modal-head"><div><h2 id="editorTitle">Add a car</h2><p style="margin:7px 0 0;color:#777b84;font-size:14px">New vehicle listing for the showroom</p></div><button type="button" class="close" id="closeEditor">×</button></div>
  <form id="carForm"><input id="carId" type="hidden"><section class="photo-section"><label>PHOTOS / PICHA ZA GARI</label><input id="photoFiles" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden><div id="photoDrop" class="photo-drop" role="button" tabindex="0"><span class="upload-icon">⇧</span><strong>Tap to upload or drag photos here</strong><small>JPG, PNG or WebP · up to 12 photos · 5 MB each</small></div><div id="photoPreviews" class="photo-previews"></div><div id="photoCount" class="photo-count">No photos selected yet</div></section><div class="formgrid">
   <div class="field"><label>Make / Kampuni *</label><input id="make" required maxlength="100"></div>
   <div class="field"><label>Model *</label><input id="model" required maxlength="100"></div>
